@@ -4,7 +4,6 @@ function HomePage() {
   return (
     <div className="container mx-auto ">
       <div className="h-screen">HomePage</div>
-      <div className="h-screen">HomePage</div>
     </div>
   );
 }
