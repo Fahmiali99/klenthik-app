@@ -9,8 +9,10 @@ function Content() {
         <div>
           <div className="flex justify-center text-center">
             <div>
-              <p className=" text-primary-succes text-xl">Why Choose Us</p>
-              <h1 className=" text-4xl py-4 font-semibold text-primary-dark">
+              <p className=" text-primary-succes md:text-lg lg:text-xl">
+                Why Choose Us
+              </p>
+              <h1 className=" text-3xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
                 Manfaat Klenthik ini
               </h1>
               <p className=" text-secondary">
@@ -26,7 +28,7 @@ function Content() {
                 className=" border border-gray-100 py-20 px-6 rounded-3xl bg-white"
               >
                 <Image src={item.images} alt="" />
-                <h1 className="text-2xl py-5 font-semibold text-primary-dark">
+                <h1 className="text-xl md:text-xl lg:text-2xl py-5 font-semibold text-primary-dark">
                   {item.title}
                 </h1>
                 <p className=" text-secondary">{item.children}</p>

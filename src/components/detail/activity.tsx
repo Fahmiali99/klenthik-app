@@ -5,11 +5,11 @@ import React from "react";
 function Activity() {
   return (
     <div className="bg-primary-blue-200">
-      <div className="  container mx-auto h-full flex  items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
+      <div className="  container mx-auto h-full flex justify-center  items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
         <div>
           <div className="flex justify-center text-center">
             <div>
-              <h1 className=" text-4xl py-4 font-semibold text-primary-dark">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
                 Galeri Kegiatan
               </h1>
               <p className=" text-secondary">Ini adalah kegiatan kami</p>
