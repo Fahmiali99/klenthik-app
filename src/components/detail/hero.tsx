@@ -1,5 +1,4 @@
 import React from "react";
-Image;
 import hero from "@/../public/assets/home/hero-img.png";
 import Image from "next/image";
 import Up from "@/common/up";
@@ -11,7 +10,7 @@ function Hero() {
       <div className=" h-full sm:block md:block lg:grid items-center py-14 md:py-20 lg:py-40 lg:min-h-[calc(100vh-3rem)] px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div>
-            <h1 className=" text-3xl md:text-3xl lg:text-4xl font-semibold text-primary-dark">
+            <h1 className=" text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-dark">
               Klenthik
             </h1>
             <p className="py-4 text-secondary text-base ">
