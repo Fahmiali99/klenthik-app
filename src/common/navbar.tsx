@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import logo from "../../public/assets/logo.png";
+import logo from "../../public/assets/common/logo.png";
 import Image from "next/image";
 
 function NavigationBar() {
@@ -52,7 +52,7 @@ function NavigationBar() {
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4 lg:p-0 lg:py-4 ">
         <a href="https://flowbite.com/" className="flex items-center">
-          <Image src={logo} width={60} className=" mr-3" alt="Flowbite Logo" />
+          <Image src={logo} width={60} className=" mr-3" alt="Klenthik" />
           <span className="self-center text-primary-dark text-2xl font-semibold whitespace-nowrap ">
             Klenthik
           </span>
