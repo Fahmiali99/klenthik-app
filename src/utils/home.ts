@@ -15,12 +15,13 @@ export const content = [
   {
     title: "Terstruktur",
     children:
-      "Project kerja yang di sediakan disini terstruk menjadikan mahasiswa aktif dalam kegiatan.",
+      "Daur ulang yang dilakukan oleh Klenthik sangat terstruktur dan ramah lingkungan",
     images: contents,
   },
   {
     title: "Relasi",
-    children: "Mahasiswa akan menambah relasi untuk kedepannya.",
+    children:
+      "Relasi dengan masyarakat, distributor minyak, dan stakholder terkait.",
     images: contents,
   },
 ];
