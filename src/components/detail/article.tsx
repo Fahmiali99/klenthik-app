@@ -5,11 +5,11 @@ import React from "react";
 function Article() {
   return (
     <div className="bg-primary-blue-200">
-      <div className="  container mx-auto h-full flex  items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
+      <div className="  container mx-auto h-full flex justify-center items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
         <div>
           <div className="flex justify-center text-center">
             <div>
-              <h1 className=" text-4xl py-4 font-semibold text-primary-dark">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
                 Artikel
               </h1>
               <p className=" text-secondary">
@@ -22,7 +22,7 @@ function Article() {
             {articles.map((item, idx) => (
               <div
                 key={idx}
-                className=" bg-white border border-gray-200 rounded-xl shadow"
+                className="max-w-lg lg:max-w-full bg-white border border-gray-200 rounded-xl shadow"
               >
                 <a href="#">
                   <Image
