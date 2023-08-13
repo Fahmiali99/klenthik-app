@@ -9,7 +9,7 @@ function Article() {
         <div>
           <div className="flex justify-center text-center">
             <div>
-              <h1 className="text-3xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
                 Artikel
               </h1>
               <p className=" text-secondary">

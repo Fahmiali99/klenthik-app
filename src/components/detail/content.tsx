@@ -12,7 +12,7 @@ function Content() {
               <p className=" text-primary-succes md:text-lg lg:text-xl">
                 Why Choose Us
               </p>
-              <h1 className=" text-3xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
+              <h1 className=" text-2xl md:text-3xl lg:text-4xl py-4 font-semibold text-primary-dark">
                 Manfaat Klenthik ini
               </h1>
               <p className=" text-secondary">
