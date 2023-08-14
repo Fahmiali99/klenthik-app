@@ -1,8 +1,6 @@
 import React from "react";
-Image;
 import information from "@/../public/assets/home/info-img.png";
 import Image from "next/image";
-import Up from "@/common/up";
 
 function Information() {
   return (

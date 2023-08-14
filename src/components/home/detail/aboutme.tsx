@@ -1,5 +1,4 @@
 import React from "react";
-Image;
 import hero from "@/../public/assets/home/about-img.png";
 import Image from "next/image";
 

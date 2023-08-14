@@ -1,4 +1,4 @@
-import { activity, articles } from "@/utils/home";
+import { activity } from "@/utils/home";
 import Image from "next/image";
 import React from "react";
 
