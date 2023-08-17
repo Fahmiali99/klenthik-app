@@ -1,5 +1,6 @@
 import { articles } from "@/utils/home";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Article() {
@@ -24,13 +25,13 @@ function Article() {
                 key={idx}
                 className="max-w-lg lg:max-w-full bg-white border border-gray-200 rounded-xl shadow"
               >
-                <a href="#">
+                <Link href="#">
                   <Image
                     className="rounded-t-xl w-full"
                     src={item.images}
                     alt=""
                   />
-                </a>
+                </Link>
                 <div className="p-5">
                   <div>
                     <h5 className="mb-2 text-xl tracking-tight text-primary-dark dark:text-white">
@@ -40,7 +41,7 @@ function Article() {
                   <p className="mb-3 font-normal text-secondary dark:text-gray-400">
                     {item.children}
                   </p>
-                  <a
+                  <Link
                     href="/article"
                     className="inline-flex items-center  py-2 text-sm font-medium text-center text-primary-blue"
                   >
@@ -60,7 +61,7 @@ function Article() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
