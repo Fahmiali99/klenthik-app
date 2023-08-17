@@ -3,7 +3,6 @@ import logo from "@/../public/assets/common/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { menu, sosmed } from "@/utils/footer";
-
 function FooterBar() {
   return (
     <footer className="bg-brown  relative">
