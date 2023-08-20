@@ -6,9 +6,17 @@ interface SearchingProps {
   filter: string;
   handleFilter: (event: React.ChangeEvent<HTMLInputElement>) => void;
   filterData: any;
+  title: string;
+  about: string;
 }
 
-function Searching({ handleSubmit, filter, handleFilter }: SearchingProps) {
+function Searching({
+  handleSubmit,
+  filter,
+  handleFilter,
+  title,
+  about,
+}: SearchingProps) {
   return (
     <div>
       <form
@@ -22,12 +30,9 @@ function Searching({ handleSubmit, filter, handleFilter }: SearchingProps) {
           <div className="flex justify-center text-center">
             <div>
               <h1 className=" text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-dark">
-                Artikel
+                {title}
               </h1>
-              <p className="pt-4 pb-8 text-secondary text-base ">
-                Anda bisa mencari berita relevan kegiatan yang berkaitan dengan
-                Klenthik pilih kategori sesuai pilihan anda
-              </p>
+              <p className="pt-4 pb-8 text-secondary text-base ">{about}</p>
             </div>
           </div>
           <div className="flex justify-center items-center ">
