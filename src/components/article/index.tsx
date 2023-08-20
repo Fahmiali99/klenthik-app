@@ -55,15 +55,23 @@ function ArticlePage() {
     const filteredItems = article.filter((item: { title: string }) =>
       item.title.toLowerCase().includes(filter.toLowerCase())
     );
-    setFilteredArticle(filteredItems);
-    setSubmitted(true);
-    setCurrentPage(1);
+
+    if (filteredItems.length === 0) {
+      window.alert(`No Resuts:  ${filter}`);
+    } else {
+      setFilteredArticle(filteredItems);
+      setSubmitted(true);
+      setCurrentPage(1);
+    }
   }
 
   return (
     <>
       <Up />
       <Searching
+        title="Artikel"
+        about="Anda bisa mencari berita relevan kegiatan yang berkaitan dengan
+        Klenthik pilih kategori sesuai pilihan anda"
         handleSubmit={handleFilterSubmit}
         filter={filter}
         handleFilter={handleFilterChange}
