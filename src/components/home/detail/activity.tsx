@@ -1,5 +1,6 @@
 import { activity } from "@/utils/home";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Activity() {
@@ -34,7 +35,7 @@ function Activity() {
                     {item.title}
                   </h5>
 
-                  <a
+                  <Link
                     href="/activity"
                     className="inline-flex items-center  py-2 text-sm font-medium text-center text-primary-blue"
                   >
@@ -54,7 +55,7 @@ function Activity() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
