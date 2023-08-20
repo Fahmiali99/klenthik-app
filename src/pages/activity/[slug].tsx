@@ -3,7 +3,8 @@ import matter from "gray-matter";
 import fs from "fs";
 import Layout from "@/common/layout";
 import Up from "@/common/up";
-import { format, parseISO } from "date-fns";
+
+import DetailPage from "@/components/activity/detail/detailpage";
 
 const ActivityDetail = (props: any) => {
   const post = props.post;
@@ -11,32 +12,13 @@ const ActivityDetail = (props: any) => {
     <div>
       <Layout>
         <Up />
-        <div className="pt-10 container mx-auto px-4 sm:px-4 md:px-4 lg:px-0">
-          <div className="rounded-2xl flex justify-center">
-            <div
-              className="relative w-full lg:w-3/5 h-64 flex justify-center items-center rounded-2xl"
-              style={{
-                backgroundImage: `url(${post.images})`,
-              }}
-            >
-              <div className="absolute inset-0 bg-black opacity-50 rounded-2xl" />
-              <div className="z-10 text-center text-white">
-                <h1 className="text-2xl font-semibold md:text-2xl lg:text-3xl text-slate-600">
-                  {post.title}
-                </h1>
-                <p className="text-slate-400 mt-2 pt-2">
-                  {format(parseISO(post.date), "MMMM dd, yyyy")}
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* content 2 */}
-          <div className="lg:flex lg:justify-center">
-            <article className="prose">
-              <Markdown>{post.content}</Markdown>
-            </article>
-          </div>
-        </div>
+        <DetailPage
+          slug={post.slug}
+          title={post.title}
+          image={post.images}
+          date={post.date}
+          content={post.content}
+        />
       </Layout>
     </div>
   );
