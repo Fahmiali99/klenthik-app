@@ -61,7 +61,7 @@ function NavigationBar() {
           </span>
         </Link>
         <button onClick={handleOpen} type="button" className="  md:hidden  ">
-          <Hamburger toggled={isOpen} toggle={setisOpen} rounded />
+          <Hamburger size={30} toggled={isOpen} toggle={setisOpen} rounded />
         </button>
 
         <div
