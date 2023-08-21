@@ -2,18 +2,17 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "./navbar";
 import Up from "./up";
 import FooterBar from "./footer";
+import Head from "./head";
+import { LayoutProps } from "../../types/layout";
 
-type LayoutProps = {
-  children: React.ReactNode;
-};
-
-function Layout({ children }: LayoutProps): JSX.Element {
+function Layout({ children, customMeta }: LayoutProps): JSX.Element {
   return (
-    <div>
+    <>
+      <Head customMeta={customMeta} />
       <NavigationBar />
       <main>{children}</main>
       <FooterBar />
-    </div>
+    </>
   );
 }
 
