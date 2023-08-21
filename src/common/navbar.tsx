@@ -2,9 +2,12 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import logo from "../../public/assets/common/logo.png";
 import Image from "next/image";
+import Link from "next/link";
+import { Divide as Hamburger } from "hamburger-react";
 
 function NavigationBar() {
   const router = useRouter();
+  const [isOpen, setisOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -51,34 +54,16 @@ function NavigationBar() {
       }`}
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4 lg:p-0 lg:py-4 ">
-        <a href="https://flowbite.com/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image src={logo} width={60} className=" mr-3" alt="Klenthik" />
           <span className="self-center text-primary-dark text-2xl font-semibold whitespace-nowrap ">
             Klenthik
           </span>
-        </a>
-        <button
-          onClick={handleOpen}
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+        </Link>
+        <button onClick={handleOpen} type="button" className="  md:hidden  ">
+          <Hamburger toggled={isOpen} toggle={setisOpen} rounded />
         </button>
+
         <div
           className={`w-full md:block md:w-auto ${open ? "block" : "hidden"}`}
           id="navbar-default"
