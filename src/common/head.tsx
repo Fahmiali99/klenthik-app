@@ -15,6 +15,7 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
     type: "website",
     ...customMeta,
   };
+  console.log(meta.image);
 
   return (
     <NextHead>
