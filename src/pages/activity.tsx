@@ -5,6 +5,7 @@ import { getPostMetadata } from "@/common/getPostMetadata";
 import ActivityPage from "@/components/activity";
 import Searching from "@/common/searching";
 import Pagination from "@/common/pagination";
+import toast from "react-hot-toast";
 
 const PageSize = 6;
 function Activity({ postMetadata }: any) {
@@ -32,7 +33,7 @@ function Activity({ postMetadata }: any) {
       item.title.toLowerCase().includes(filter.toLowerCase())
     );
     if (filteredItems.length === 0) {
-      window.alert(`No Resuts:  ${filter}`);
+      toast.error(`No Results: ${filter}`);
     } else {
       setFilteredArticle(filteredItems);
       setCurrentPage(1);

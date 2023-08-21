@@ -9,6 +9,7 @@ import { setArticle } from "@/store/article";
 import ContentData from "./detail/contentdata";
 import Pagination from "@/common/pagination";
 import { popular } from "@/utils/article";
+import toast from "react-hot-toast";
 
 let PageSize = 8;
 
@@ -57,7 +58,7 @@ function ArticlePage() {
     );
 
     if (filteredItems.length === 0) {
-      window.alert(`No Resuts:  ${filter}`);
+      toast.error(`No Results: ${filter}`);
     } else {
       setFilteredArticle(filteredItems);
       setSubmitted(true);
