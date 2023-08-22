@@ -2,8 +2,7 @@ import React from "react";
 import hero from "@/../public/assets/home/hero-img.png";
 import Image from "next/image";
 import Up from "@/common/up";
-import bg1 from "@/../public/assets/background/Ellipse 7.svg";
-import bg2 from "@/../public/assets/background/dots.png";
+
 function Hero() {
   return (
     <div>
