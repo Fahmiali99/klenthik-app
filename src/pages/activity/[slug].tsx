@@ -8,6 +8,7 @@ import DetailPage from "@/components/activity/detail/detailpage";
 
 const ActivityDetail = (props: any) => {
   const post = props.post;
+
   return (
     <div>
       <Layout>
@@ -17,6 +18,7 @@ const ActivityDetail = (props: any) => {
           title={post.title}
           image={post.images}
           date={post.date}
+          company={post.company}
           content={post.content}
         />
       </Layout>
@@ -38,6 +40,7 @@ export async function getServerSideProps(context: any) {
       title: matterResult.data.title,
       date: matterResult.data.date,
       images: matterResult.data.image,
+      company: matterResult.data.company,
       content: contentString,
     };
 

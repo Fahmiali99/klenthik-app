@@ -11,7 +11,7 @@ import Pagination from "@/common/pagination";
 import { popular } from "@/utils/article";
 import toast from "react-hot-toast";
 
-let PageSize = 8;
+let PageSize = 11;
 
 function ArticlePage() {
   const dispatch = useDispatch();

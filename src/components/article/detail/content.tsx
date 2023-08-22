@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { format, parseISO } from "date-fns";
 
 function Content({ filterData, popular }: any) {
   return (
@@ -21,7 +22,9 @@ function Content({ filterData, popular }: any) {
                   <h5 className="mb-2 text-3xl tracking-tight text-primary-dark dark:text-white">
                     {item.title}
                   </h5>
-                  <p className=" text-secondary">{item.date}</p>
+                  <p className=" text-secondary">
+                    Klenthik / {format(parseISO(item.date), " dd MMMM, yyyy")}
+                  </p>
                 </div>
               </Link>
             </ul>
@@ -45,7 +48,10 @@ function Content({ filterData, popular }: any) {
                             {item.title}
                           </h5>
 
-                          <p className=" text-secondary pt-2">{item.date}</p>
+                          <p className=" text-secondary pt-2">
+                            Klenthik /
+                            {format(parseISO(item.date), " dd MMMM, yyyy")}
+                          </p>
                         </div>
                       </Link>
                     </ul>
@@ -72,7 +78,9 @@ function Content({ filterData, popular }: any) {
                       {item.title}
                     </h5>
 
-                    <p className=" text-secondary pt-2">{item.date}</p>
+                    <p className=" text-secondary pt-2">
+                      Klenthik / {format(parseISO(item.date), " dd MMMM, yyyy")}
+                    </p>
                   </div>
                 </Link>
               </ul>
