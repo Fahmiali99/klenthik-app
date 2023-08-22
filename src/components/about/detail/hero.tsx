@@ -1,8 +1,19 @@
-import React from "react";
+import ModalComponent from "@/common/modal";
+import React, { useState } from "react";
 
 function Hero() {
+  const [open, setOpen] = useState(false);
+
+  const handleModal = () => {
+    setOpen(!open);
+  };
+
+  const handleClose = () => {
+    setOpen(!open);
+  };
+
   return (
-    <div className=" container mx-auto z-10 relative">
+    <div className=" container mx-auto  relative">
       <div className="pt-36 md:pt-36 lg:pt-24  h-full flex justify-center text-center items-center py-14 md:py-20 lg:py-40 lg:min-h-[calc(100vh-3rem)] px-4">
         <div>
           <h1 className=" text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-dark">
@@ -15,13 +26,11 @@ function Hero() {
             Mengefisiensi proses distribusi dan akomodasi limbah minyak
             jelantah.
           </p>
-          <button
-            onClick={() => window.open("/about")}
-            type="button"
-            className="text-white bg-primary-blue hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  focus:outline-none "
-          >
-            Selengkapnya
-          </button>
+          <ModalComponent
+            handleModal={handleModal}
+            handleClose={handleClose}
+            open={open}
+          />
         </div>
       </div>
     </div>
