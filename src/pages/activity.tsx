@@ -6,6 +6,7 @@ import ActivityPage from "@/components/activity";
 import Searching from "@/common/searching";
 import Pagination from "@/common/pagination";
 import toast from "react-hot-toast";
+import BgBody from "@/components/article/background/bgbody";
 
 const PageSize = 6;
 function Activity({ postMetadata }: any) {
@@ -41,38 +42,41 @@ function Activity({ postMetadata }: any) {
   }
 
   return (
-    <Layout>
-      <div>
-        <Up />
-        <Searching
-          title="Gallery Kegiatan"
-          about="Anda bisa mencari berita relevan kegiatan yang berkaitan dengan Klenthik pilih kategori sesuai pilihan anda"
-          handleSubmit={handleFilterSubmit}
-          filter={filter}
-          handleFilter={handleFilterChange}
-          filterData={filteredArticle}
-        />
-        <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-0">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center pb-10">
-            {currentTableData?.map((item: any, idx: any) => (
-              <ActivityPage
-                key={idx}
-                slug={item.slug}
-                image={item.image}
-                title={item.title}
-                date={item.date}
-              />
-            ))}
+    <div>
+      <BgBody />
+      <Layout>
+        <div className="relative">
+          <Up />
+          <Searching
+            title="Gallery Kegiatan"
+            about="Anda bisa mencari berita relevan kegiatan yang berkaitan dengan Klenthik pilih kategori sesuai pilihan anda"
+            handleSubmit={handleFilterSubmit}
+            filter={filter}
+            handleFilter={handleFilterChange}
+            filterData={filteredArticle}
+          />
+          <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-0">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center pb-10">
+              {currentTableData?.map((item: any, idx: any) => (
+                <ActivityPage
+                  key={idx}
+                  slug={item.slug}
+                  image={item.image}
+                  title={item.title}
+                  date={item.date}
+                />
+              ))}
+            </div>
           </div>
+          <Pagination
+            currentPage={currentPage}
+            totalCount={totalCount}
+            pageSize={PageSize}
+            onPageChange={(page: number) => setCurrentPage(page)}
+          />
         </div>
-        <Pagination
-          currentPage={currentPage}
-          totalCount={totalCount}
-          pageSize={PageSize}
-          onPageChange={(page: number) => setCurrentPage(page)}
-        />
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 }
 
