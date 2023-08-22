@@ -14,7 +14,12 @@ export default function BgHero() {
       </div>
 
       <div className="flex justify-end relative bottom-0 right-1/3 top-96 ">
-        <Image src={bg2} width={150} alt="" className="absolute top-96" />
+        <Image
+          src={bg2}
+          width={150}
+          alt=""
+          className="absolute top-96 hidden md:block lg:block"
+        />
       </div>
     </div>
   );
