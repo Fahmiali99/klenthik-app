@@ -14,7 +14,7 @@ export default function BgBody() {
           src={bg1}
           width={200}
           alt=""
-          className="absolute -bottom-2/4 right-0 rotate-180 "
+          className="absolute -bottom-72 right-0 rotate-180 "
         />
       </div>
     </div>
