@@ -4,7 +4,7 @@ import React from "react";
 
 function Content() {
   return (
-    <div className="bg-primary-blue-200">
+    <div className="bg-primary-blue-200 relative">
       <div className="  container mx-auto h-full flex  items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
         <div>
           <div className="flex justify-center text-center">
