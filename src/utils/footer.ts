@@ -55,12 +55,12 @@ export const menu = [
         href: "/",
       },
       {
-        name: "Terms &amp; Conditions",
-        href: "/about",
+        name: "Terms Conditions",
+        href: "/",
       },
       {
         name: "Intro Klenthink",
-        href: "/article",
+        href: "/",
       },
     ],
   },

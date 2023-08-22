@@ -4,7 +4,6 @@ import article3 from "@/../public/assets/article/A3.png";
 import article4 from "@/../public/assets/article/A4.png";
 import article5 from "@/../public/assets/article/A5.png";
 import article6 from "@/../public/assets/article/A6.png";
-import article7 from "@/../public/assets/article/A7.png";
 import article8 from "@/../public/assets/article/A8.png";
 import article9 from "@/../public/assets/article/A9.png";
 import article10 from "@/../public/assets/article/A10.png";

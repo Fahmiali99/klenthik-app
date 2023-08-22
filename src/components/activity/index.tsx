@@ -7,11 +7,13 @@ interface ActivityProps {
   date: string;
   image: string;
   title: string;
+  company: string;
   slug: string;
 }
 
 function ActivityPage(props: ActivityProps) {
-  const { slug, image, title, date } = props;
+  const { slug, image, title, date, company } = props;
+
   return (
     <div className="rounded-2xl ">
       <Link href={`/activity/${slug}`}>
@@ -19,16 +21,16 @@ function ActivityPage(props: ActivityProps) {
           <Image
             className="rounded-2xl w-full h-48 sm:h-72 lg:h-48"
             src={image}
-            width={100}
-            height={100}
+            width={250}
+            height={250}
             alt=""
           />
           <div className="py-5">
-            <h5 className="text-xl w-full lg:w-3/4 tracking-tight text-primary-dark dark:text-white">
+            <h5 className=" text-xl w-full lg:w-3/4 tracking-tight text-primary-dark dark:text-white">
               {title}
             </h5>
             <p className="text-secondary pt-2">
-              {format(parseISO(date), "MMMM dd, yyyy")}
+              {company} / {format(parseISO(date), "dd MMM, yyyy")}
             </p>
           </div>
         </div>

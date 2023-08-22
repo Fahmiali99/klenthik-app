@@ -12,9 +12,10 @@ export function getPostMetadata() {
       title: matterResult.data.title,
       image: matterResult.data.image,
       date: matterResult.data.date,
-      subtitle: matterResult.data.subtitle,
+      company: matterResult.data.company,
       slug: fileName.replace(".md", ""),
     };
   });
+
   return slugs;
 }
