@@ -64,6 +64,7 @@ function Activity({ postMetadata }: any) {
                   image={item.image}
                   title={item.title}
                   date={item.date}
+                  company={item.company}
                 />
               ))}
             </div>

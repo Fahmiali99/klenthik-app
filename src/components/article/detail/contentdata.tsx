@@ -2,6 +2,7 @@ import Layout from "@/common/layout";
 import Up from "@/common/up";
 import React from "react";
 import Image from "next/image";
+import { format, parseISO } from "date-fns";
 
 interface ContentProps {
   filteredItems: any;
@@ -27,7 +28,10 @@ function ContentData(props: ContentProps) {
                       <h5 className="text-xl w-full lg:w-3/4 tracking-tight text-primary-dark dark:text-white">
                         {item.title}
                       </h5>
-                      <p className="text-secondary pt-2">{item.date}</p>
+                      <p className="text-secondary pt-2">
+                        Klenthik /
+                        {format(parseISO(item.date), " dd MMMM, yyyy")}
+                      </p>
                     </div>
                   </div>
                 </a>
