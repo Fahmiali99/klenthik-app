@@ -10,15 +10,11 @@ export const modalData: ModaDataType[] = [
     description: [
       {
         children:
-          "Mengurangi jumlah limbah minyak jelantah yang tidak terpakai.",
+          "Mengifiensi proses distribusi dan akomodasi limbah minyak jelantah.",
       },
       {
         children:
-          "Mengefisiensi proses distribusi dan akomodasi limbah minyak jelantah.",
-      },
-      {
-        children:
-          "Meningkatkan kapabilitas produksi energi terbarukan yang menghasilkan bahan bakar alternatif.",
+          "Meningkatkan kapabilitas recycle limbah menjadi produk yang ramah lingkungan.",
       },
     ],
   },
