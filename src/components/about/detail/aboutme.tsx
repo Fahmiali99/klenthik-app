@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Aboutme() {
   return (
-    <div className=" container mx-auto h-full sm:block md:block lg:grid items-center py-0 md:py-20 lg:py-20 px-4  lg:px-0">
+    <div className=" container mx-auto h-full sm:block md:block lg:grid items-center py-0 md:py-20 lg:py-20 px-4  lg:px-0 relative z-10">
       <div className="py-14 grid grid-cols-1 lg:grid-cols-2 items-center">
         <div className="order-2 pt-7 lg:pt-0 lg:pl-10">
           <h1 className=" text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-dark">

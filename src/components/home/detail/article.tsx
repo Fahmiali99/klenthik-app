@@ -6,7 +6,7 @@ import React from "react";
 function Article() {
   return (
     <div className="bg-primary-blue-200">
-      <div className="  container mx-auto h-full flex justify-center items-center py-14 md:py-20 lg:py-20  px-4 sm:px-4 md:px-4 lg:px-0">
+      <div className="  container mx-auto h-full flex justify-center items-center pb-14 md:pb-20 lg:pb-20  px-4 sm:px-4 md:px-4 lg:px-0">
         <div>
           <div className="flex justify-center text-center">
             <div>
@@ -65,6 +65,15 @@ function Article() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center pt-10">
+            <Link
+              href="/article"
+              type="button"
+              className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-primary-blue focus:outline-none bg-transparant border border-primary-blue hover:bg-primary-blue hover:text-white focus:z-10 focus:ring-4 focus:ring-blue-300 rounded-full"
+            >
+              Lihat semua
+            </Link>
           </div>
         </div>
       </div>
