@@ -5,8 +5,8 @@ import Link from "next/link";
 import { menu, sosmed } from "@/utils/footer";
 function FooterBar() {
   return (
-    <footer className="bg-brown  relative">
-      <div className="w-screen max-w-7xl mx-auto px-4 py-6 lg:py-8">
+    <footer className="bg-brown relative ">
+      <div className="w-full max-w-7xl mx-auto px-4 py-6 sm:py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">

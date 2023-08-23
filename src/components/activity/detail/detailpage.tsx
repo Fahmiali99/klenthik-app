@@ -36,7 +36,7 @@ function DetailPage(props: ActivityProps) {
           </div>
         </div>
 
-        <div className="lg:flex lg:justify-center pb-10 text-justify">
+        <div className="lg:flex text-left lg:justify-center pb-10 lg:text-justify">
           <article className="prose">
             <Markdown>{content}</Markdown>
           </article>
