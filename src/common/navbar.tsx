@@ -53,7 +53,7 @@ function NavigationBar() {
         scrolled ? " bg-blue-500 duration-300 shadow" : "  "
       }`}
     >
-      <div className="container mx-auto flex flex-wrap items-center justify-between p-4 lg:p-0 lg:py-4 ">
+      <div className="w-screen max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between p-4  lg:py-4 ">
         <Link href="/" className="flex items-center">
           <Image src={logo} width={60} className=" mr-3" alt="Klenthik" />
           <span className="self-center text-primary-dark text-2xl font-semibold whitespace-nowrap ">
