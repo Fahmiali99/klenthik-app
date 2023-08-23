@@ -26,7 +26,7 @@ function ActivityPage(props: ActivityProps) {
             alt=""
           />
           <div className="py-5">
-            <h5 className=" text-xl w-full lg:w-3/4 tracking-tight text-primary-dark dark:text-white">
+            <h5 className=" text-xl font-semibold w-full lg:w-3/4 tracking-tight text-primary-dark dark:text-white">
               {title}
             </h5>
             <p className="text-secondary pt-2">

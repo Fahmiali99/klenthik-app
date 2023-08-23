@@ -47,34 +47,40 @@ function Activity({ postMetadata }: any) {
       <Layout>
         <div className="relative">
           <Up />
-          <Searching
-            title="Gallery Kegiatan"
-            about="Anda bisa mencari berita relevan kegiatan yang berkaitan dengan Klenthik pilih kategori sesuai pilihan anda"
-            handleSubmit={handleFilterSubmit}
-            filter={filter}
-            handleFilter={handleFilterChange}
-            filterData={filteredArticle}
-          />
-          <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-0">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center pb-10">
-              {currentTableData?.map((item: any, idx: any) => (
-                <ActivityPage
-                  key={idx}
-                  slug={item.slug}
-                  image={item.image}
-                  title={item.title}
-                  date={item.date}
-                  company={item.company}
+          <div className="flex justify-center">
+            <div className="w-screen  max-w-7xl mx-auto px-4 sm:px-6">
+              <div className=" pb-10">
+                <Searching
+                  title="Gallery Kegiatan"
+                  about="Anda bisa mencari berita relevan kegiatan yang berkaitan dengan Klenthik pilih kategori sesuai pilihan anda"
+                  handleSubmit={handleFilterSubmit}
+                  filter={filter}
+                  handleFilter={handleFilterChange}
+                  filterData={filteredArticle}
                 />
-              ))}
+                <div className="container mx-auto px-4 sm:px-4 md:px-4 lg:px-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center pb-10">
+                    {currentTableData?.map((item: any, idx: any) => (
+                      <ActivityPage
+                        key={idx}
+                        slug={item.slug}
+                        image={item.image}
+                        title={item.title}
+                        date={item.date}
+                        company={item.company}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <Pagination
+                  currentPage={currentPage}
+                  totalCount={totalCount}
+                  pageSize={PageSize}
+                  onPageChange={(page: number) => setCurrentPage(page)}
+                />
+              </div>
             </div>
           </div>
-          <Pagination
-            currentPage={currentPage}
-            totalCount={totalCount}
-            pageSize={PageSize}
-            onPageChange={(page: number) => setCurrentPage(page)}
-          />
         </div>
       </Layout>
     </div>
